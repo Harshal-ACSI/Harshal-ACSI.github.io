@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
   <style>
+    @font-face {
+      font-family: Centuar;
+      src: local("Fonts/CENTAUR.TTF");
+    }
+    @font-face {
+      font-family: Fractul Alt;
+      src: url("Fonts/FractulAlt-Bold.ttf");
+    }
+    @font-face {
+      font-family: Space Mono;
+      src: url("Fonts/SpaceMono-Regular.ttf");
+    }
     h1 {
       font-family: Fractul Alt, sans-serif;
       font-size: 70px;
@@ -13,7 +25,7 @@
     }
 
     p {
-      font-family: centaur, sans-serif;
+      font-family: Centaur, sans-serif;
       color: rgb(0, 0, 0);
       margin-left: 100px;
       margin-right: 100px;
@@ -22,7 +34,7 @@
     }
 
     mono {
-      font-family: Space mono, monospace;
+      font-family: Space Mono, monospace;
       color: rgb(255, 255, 255);
     }
 
@@ -35,6 +47,22 @@
       display: none;
       -ms-overflow-style: none;
       scrollbar-width: none;
+    }
+    a:link {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+    a:visited {
+      text-decoration: none;
+      color: rgb(0, 150, 150);
+    }
+    a:hover {
+      text-decoration: none;
+      color: rgb(0, 150, 150);
+    }
+    a:active {
+      text-decoration: none;
+      color: rgb(0, 120, 120);
     }
   </style>
 
@@ -60,10 +88,10 @@
       "
     >
       <mono>
-        <a href="Physics\physics.html"> - Homepage </a>
-        <div> - Physics </div>
-        <div>&nbsp;&nbsp;- Reactions </div>
-        <div> - Past Year Papers </div>
+        <a href="index.html" style=""> - Homepage </a>
+        <div>- Physics</div>
+        <div>&nbsp;&nbsp;- Reactions</div>
+        <div>- Past Year Papers</div>
       </mono>
     </div>
   </body>
