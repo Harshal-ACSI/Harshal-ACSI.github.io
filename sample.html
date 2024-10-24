@@ -1,97 +1,190 @@
 <!DOCTYPE html>
-<html>
-<style>
-  h1 {
-    font-family: Fractul Alt, sans-serif;
-    font-size: 70px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin-top: 100px;
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-text-stroke: 2px rgb(0, 0, 0);
-    text-shadow: 4px 4px rgb(0, 0, 0);
-  }
+<html lang="en" style="cursor: none">
+  <style>
+    @font-face {
+      font-family: Fractul_Alt;
+      src: url("Fonts/FractulAlt-Bold.ttf");
+    }
 
-  p {
-    font-family: centaur, sans-serif;
-    color: rgb(0, 0, 0);
-    margin-left: 100px;
-    margin-right: 100px;
-    text-align: justify;
-    font-size: 25px;
-  }
+    @font-face {
+      font-family: Space_Mono;
+      src: url("Fonts/SpaceMono-Regular.ttf");
+    }
 
-  mono {
-    font-family: Space mono, monospace;
-    color: rgb(255, 255, 255);
-  }
+    @font-face {
+      font-family: Centaur;
+      src: url("Fonts/CentaurMTStd.ttf");
+    }
 
-  ::selection {
-    color: rgb(255, 255, 255);
-    background: rgb(0, 75, 75);
-  }
+    br {
+      padding-left: 200px;
+    }
 
-  ::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-</style>
+    chap {
+      font-family: Centaur, sans-serif;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-size: 17px;
+      width: 99%;
+      position: absolute;
+      margin-bottom: 0px;
+      text-decoration: underline 0.7px;
+      text-underline-offset: 4px;
+    }
 
-<body style="background-color: rgb(255, 255, 255)">
-  <h1>Harshal's Notes</h1>
-  <hr style="margin-left: 100px; margin-right: 100px" />
-  <p>
-    Hi! I'm Harshal. I'm a student at Anglo-Chinese School (Independent) and I
-    have created this website to share my notes with you. I hope you find them useful!
-  </p>
-  <p>
-    Sed nec erat venenatis, feugiat leo eget, faucibus massa. Ut at maximus
-    sapien. Vivamus quis orci placerat, efficitur est nec, feugiat dolor.
-    Mauris interdum, tellus vel elementum porta, nunc elit fringilla ligula,
-    sit amet accumsan arcu augue et mauris. Vivamus tincidunt tortor vitae
-    arcu tempor, in commodo lacus vehicula. Nunc auctor maximus odio, sit amet
-    euismod mi pellentesque sed. Donec quis semper sem. Sed vel risus egestas,
-    consequat nulla vel, auctor tellus. Praesent non feugiat nibh. Curabitur
-    vitae elit tristique lorem consectetur varius eget a diam.
-  </p>
-  <p>
-    Aenean congue purus quis velit vestibulum, vel tincidunt ante congue.
-    Vivamus luctus, lorem nec molestie interdum, velit ante faucibus lectus,
-    quis cursus risus augue vitae magna. Vestibulum auctor ullamcorper ante eu
-    fermentum. Fusce vitae erat eu mauris tempus fringilla ut nec odio.
-    Praesent at facilisis purus. Cras aliquam nunc nec neque consequat, quis
-    ultricies nibh venenatis. Morbi maximus lacinia sem, id pretium diam
-    sagittis ac. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. Fusce vitae auctor libero. Sed viverra
-    velit non tellus blandit dignissim. Sed gravida dolor dui, et pharetra
-    nisi sollicitudin et. Aenean scelerisque tempus nulla a viverra. Aenean
-    erat odio, molestie facilisis metus quis, viverra ornare neque. Maecenas
-    luctus id ante vitae auctor. Ut sit amet nunc tincidunt, imperdiet ligula
-    ut, posuere nunc.
-  </p>
-  <copywrite>
-    <div style="
-        background-color: rgb(0, 0, 0);
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
-        border-radius: 10px;
-      ">
-      <mono>
-        Nam vel tellus aliquet diam pellentesque congue sit amet a nisl.
-        Praesent maximus aliquam vehicula. Donec suscipit lorem ut diam feugiat
-        commodo. Cras dapibus congue elit. Suspendisse gravida nisi lacus, sed
-        elementum ipsum fermentum vitae. Vestibulum aliquam tempor erat ac
-        dapibus. Pellentesque tempor lorem sit amet erat sodales, feugiat
-        lacinia felis molestie. Aliquam erat volutpat. Donec facilisis leo quam.
-        Donec auctor non dolorid aliquet.
-      </mono>
-    </div>
-  </copywrite>
-</body>
+    cont {
+      font-family: Centaur, sans-serif;
+      color: rgb(0, 0, 0);
+      text-align: left;
+      font-size: 20px;
+    }
 
+    h1 {
+      font-family: Fractul_Alt, sans-serif;
+      font-size: 70px;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      margin-top: 100px;
+      -webkit-text-fill-color: rgb(255, 255, 255);
+      -webkit-text-stroke: 2px rgb(0, 0, 0);
+      text-shadow: 4px 4px rgb(0, 0, 0);
+      padding-left: 0;
+    }
+
+    h2 {
+      font-family: Centaur, sans-serif;
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-weight: normal;
+      margin-top: 20px;
+      width: 99%;
+      position: absolute;
+    }
+
+    p {
+      font-family: Centaur, sans-serif;
+      color: rgb(0, 0, 0);
+      margin-left: 100px;
+      margin-right: 100px;
+      text-align: justify;
+      font-size: 25px;
+      line-height: 27px;
+    }
+
+    mono {
+      font-family: Space_Mono, monospace;
+      color: rgb(255, 255, 255);
+    }
+
+    ::selection {
+      color: rgb(255, 255, 255);
+      background: rgba(0, 110, 110, 0.7);
+      height: 20%;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    a:link,
+    a:visited {
+      font-family: Space_Mono, monospace;
+      font-size: 14px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      cursor: none;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 5px;
+      border-radius: 10px;
+      background-color: rgba(0, 110, 110, 0.7);
+      display: inline-block;
+      margin-top: 5px;
+      margin-left: 200px;
+      transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #cursor {
+      width: 20px;
+      height: 20px;
+      border-radius: 0% 50% 50% 50%;
+      position: fixed;
+      pointer-events: none;
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      mix-blend-mode: difference;
+      background-color: rgba(255, 145, 145, 0.5);
+    }
+  </style>
+
+  <body style="background-color: rgb(255, 255, 255)">
+    <h1>Harshal's Notes</h1>
+    <hr style="margin-left: 100px; margin-right: 100px" />
+    <p>
+      Hi! I'm Harshal. I'm a student at Anglo-Chinese School (Independent) and I
+      have created this website to share my notes with you. I hope you find them
+      useful!
+    </p>
+    <p>
+      Sed nec erat venenatis, feugiat leo eget, faucibus massa. Ut at maximus
+      sapien. Vivamus quis orci placerat, efficitur est nec, feugiat dolor.
+      Mauris interdum, tellus vel elementum porta, nunc elit fringilla ligula,
+      sit amet accumsan arcu augue et mauris. Vivamus tincidunt tortor vitae
+      arcu tempor, in commodo lacus vehicula. Nunc auctor maximus odio, sit amet
+      euismod mi pellentesque sed. Donec quis semper sem. Sed vel risus egestas,
+      consequat nulla vel, auctor tellus. Praesent non feugiat nibh. Curabitur
+      vitae elit tristique lorem consectetur varius eget a diam.
+    </p>
+    <p>
+      Aenean congue purus quis velit vestibulum, vel tincidunt ante congue.
+      Vivamus luctus, lorem nec molestie interdum, velit ante faucibus lectus,
+      quis cursus risus augue vitae magna. Vestibulum auctor ullamcorper ante eu
+      fermentum. Fusce vitae erat eu mauris tempus fringilla ut nec odio.
+      Praesent at facilisis purus. Cras aliquam nunc nec neque consequat, quis
+      ultricies nibh venenatis. Morbi maximus lacinia sem, id pretium diam
+      sagittis ac. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Fusce vitae auctor libero. Sed viverra
+      velit non tellus blandit dignissim. Sed gravida dolor dui, et pharetra
+      nisi sollicitudin et. Aenean scelerisque tempus nulla a viverra. Aenean
+      erat odio, molestie facilisis metus quis, viverra ornare neque. Maecenas
+      luctus id ante vitae auctor. Ut sit amet nunc tincidunt, imperdiet ligula
+      ut, posuere nunc.
+    </p>
+    <copywrite>
+      <div
+        style="
+          background-color: rgb(0, 0, 0);
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 10px;
+          margin-left: 100px;
+          margin-right: 100px;
+          border-radius: 10px;
+        "
+      >
+        <mono>
+          Nam vel tellus aliquet diam pellentesque congue sit amet a nisl.
+          Praesent maximus aliquam vehicula. Donec suscipit lorem ut diam
+          feugiat commodo. Cras dapibus congue elit. Suspendisse gravida nisi
+          lacus, sed elementum ipsum fermentum vitae. Vestibulum aliquam tempor
+          erat ac dapibus. Pellentesque tempor lorem sit amet erat sodales,
+          feugiat lacinia felis molestie. Aliquam erat volutpat. Donec facilisis
+          leo quam. Donec auctor non dolorid aliquet.
+        </mono>
+      </div>
+    </copywrite>
+  </body>
 </html>
