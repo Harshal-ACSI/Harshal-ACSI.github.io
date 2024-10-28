@@ -48,7 +48,8 @@
       -webkit-text-fill-color: rgb(0, 0, 0);
       -webkit-text-stroke: 2px rgb(255, 255, 255);
       text-shadow: 0px 0px rgb(255, 255, 255);
-      transition: text-shadow 0.3s ease-in-out;
+      transition: text-shadow 0.3s ease-in-out,
+        -webkit-text-fill-color 0.3s ease-in-out;
     }
 
     h1:hover {
@@ -146,7 +147,6 @@
     #cursor {
       width: 23px;
       height: 23px;
-
       border-radius: 0% 50% 50% 50%;
       position: fixed;
       pointer-events: none;
@@ -184,6 +184,29 @@
       <h1 style="margin-bottom: 0px; padding-bottom: 0px; border-bottom: 0px">
         Studium
       </h1>
+      <buttons
+        style="
+          right: 0px;
+          left: 0px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 100px;
+        "
+      >
+        <a href="#main-start" id="Hello" style="margin: 0px">Enter</a>
+      </buttons>
+      <script>
+        document
+          .getElementById("Hello")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            document
+              .getElementById("main-start")
+              .scrollIntoView({ behavior: "smooth" });
+          });
+      </script>
       <p
         style="
           left: 0px;
@@ -202,90 +225,96 @@
         The medium for studying
       </p>
     </div>
-    <contents style="margin-left: 200px">
-      <cont>
-        <hr style="margin-left: 180px; margin-right: 180px" />
-        <z style="padding-left: 200px; font-size: 30px">Table of Contents:</z
-        ><br />
-        <a href="index.html"> ⟳ Homepage</a><br /><space
-          style="height: 20px"
-        ></space>
-        <a href="Physics/Physics.html">- Physics</a><br />
-        <a href="Chemistry/Chemistry.html">- Chemistry</a><br />
-        <a href=" Biology/Biology.html">- Biology</a><br />
-        <a href=" Mathematics/Mathematics.html">- Mathematics</a><br />
-        <hr style="margin-left: 180px; margin-right: 180px" />
-      </cont>
-    </contents>
-    <p style="text-align: center">
-      Welcome to Studium – Your Ultimate Free Notes Sharing Platform! Crafted
-      with the collaboration of fellow learners, our mission at Studium embodies
-      empowerment through education in every sense. Here's why you need us:
-    </p>
-    <div>
-      <box>
-        <bold style="font-weight: bold; font-size: 20px">Accessibility</bold
-        ><br />
-        <body-text
-          >No more barriers to knowledge acquisition; on Studium we provide a
-          free space where academic materials can be freely accessed and shared
-          without the constraints of financial limitations or institutional
-          restrictions. Our open-source platform ensures complete transparency,
-          allowing everyone equal opportunity in learning for all ages across
-          various disciplines.</body-text
-        >
-      </box>
-    </div>
-    <div>
-      <box>
-        <bold style="font-weight: bold; font-size: 20px"
-          >Collaborative Learning</bold
-        ><br />
-        <body-text
-          >At Studium, we believe that true understanding comes through
-          collaboration; students sharing their notes not only helps others but
-          also reinforces the knowledge they have themselves. By contributing to
-          our platform, you are joining a network of learners who value
-          collective intelligence and shared growth in academia.</body-text
-        >
-      </box>
-    </div>
-    <div>
-      <box>
-        <bold style="font-weight: bold; font-size: 20px"
-          >Open Source & Free</bold
-        ><br />
-        <body-text>
-          Our commitment is not just towards education but also the principles
-          that govern it; as a platform developed solely by other learners,
-          Studium champions open-source software which remains free and
-          accessible to all who seek academic assistance or wish to contribute
-          knowledge themselves—the embodiment of learning liberation.</body-text
-        >
-      </box>
-    </div>
-    <div>
-      <box>
-        <bold style="font-weight: bold; font-size: 20px">Private</bold><br />
-        <body-text>
-          Your Privacy is Paramount: At Studium, your journey through the world
-          of academia remains yours alone; we respect and protect this sacred
-          space with utmost vigilance. Here on our platform lies a haven where
-          personal data stands undefiled—for privacy here at Studium isn't an
-          afterthought but rather built into its very foundation: rest assured
-          that your digital interactions are safe from prying eyes, secured
-          within the sanctuary of confidentiality we maintain as staunchly
-          protected guardians.
-        </body-text>
-      </box>
-    </div>
-    <p>
-      Join us at Studium today; together let's break free from the constraints
-      of traditional education, champion knowledge sharing amongst peers,
-      empower each other to learn more effectively – because learning should not
-      be an individual endeavor but rather one that connects and enriches every
-      learner in this global community.
-    </p>
+    <flag id="main-start">
+      <contents style="margin-left: 200px">
+        <cont>
+          <hr style="margin-left: 180px; margin-right: 180px" />
+          <br />
+          <z style="padding-left: 200px; font-size: 30px">Table of Contents:</z
+          ><br />
+          <a href="index.html"> ⟳ Homepage</a><br /><space
+            style="height: 20px"
+          ></space>
+          <a href="Physics/Physics.html">- Physics</a><br />
+          <a href="Chemistry/Chemistry.html">- Chemistry</a><br />
+          <a href=" Biology/Biology.html">- Biology</a><br />
+          <a href=" Mathematics/Mathematics.html">- Mathematics</a><br />
+          <hr style="margin-left: 180px; margin-right: 180px" />
+        </cont>
+      </contents>
+      <p style="text-align: center">
+        Welcome to Studium – Your Ultimate Free Notes Sharing Platform! Crafted
+        with the collaboration of fellow learners, our mission at Studium
+        embodies empowerment through education in every sense. Here's why you
+        need us:
+      </p>
+      <div>
+        <box>
+          <bold style="font-weight: bold; font-size: 20px">Accessibility</bold
+          ><br />
+          <body-text
+            >No more barriers to knowledge acquisition; on Studium we provide a
+            free space where academic materials can be freely accessed and
+            shared without the constraints of financial limitations or
+            institutional restrictions. Our open-source platform ensures
+            complete transparency, allowing everyone equal opportunity in
+            learning for all ages across various disciplines.</body-text
+          >
+        </box>
+      </div>
+      <div>
+        <box>
+          <bold style="font-weight: bold; font-size: 20px"
+            >Collaborative Learning</bold
+          ><br />
+          <body-text
+            >At Studium, we believe that true understanding comes through
+            collaboration; students sharing their notes not only helps others
+            but also reinforces the knowledge they have themselves. By
+            contributing to our platform, you are joining a network of learners
+            who value collective intelligence and shared growth in
+            academia.</body-text
+          >
+        </box>
+      </div>
+      <div>
+        <box>
+          <bold style="font-weight: bold; font-size: 20px"
+            >Open Source & Free</bold
+          ><br />
+          <body-text>
+            Our commitment is not just towards education but also the principles
+            that govern it; as a platform developed solely by other learners,
+            Studium champions open-source software which remains free and
+            accessible to all who seek academic assistance or wish to contribute
+            knowledge themselves—the embodiment of learning
+            liberation.</body-text
+          >
+        </box>
+      </div>
+      <div>
+        <box>
+          <bold style="font-weight: bold; font-size: 20px">Private</bold><br />
+          <body-text>
+            Your Privacy is Paramount: At Studium, your journey through the
+            world of academia remains yours alone; we respect and protect this
+            sacred space with utmost vigilance. Here on our platform lies a
+            haven where personal data stands undefiled—for privacy here at
+            Studium isn't an afterthought but rather built into its very
+            foundation: rest assured that your digital interactions are safe
+            from prying eyes, secured within the sanctuary of confidentiality we
+            maintain as staunchly protected guardians.
+          </body-text>
+        </box>
+      </div>
+      <p>
+        Join us at Studium today; together let's break free from the constraints
+        of traditional education, champion knowledge sharing amongst peers,
+        empower each other to learn more effectively – because learning should
+        not be an individual endeavor but rather one that connects and enriches
+        every learner in this global community.
+      </p>
+    </flag>
   </body>
   <bar>
     <rect
@@ -297,25 +326,43 @@
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 0px;
-        margin: 10px;
-        border-radius: 10px 10px 10px 10px;
+        margin: 0px;
+        border-radius: 0px 0px 10px 10px;
         position: fixed;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
-        background-color: rgba(255, 255, 255, 0.6);
-        filter: invert(100%);
+        background-color: rgba(0, 0, 0, 0);
       "
     >
       <buttons
         style="
+          display: flex;
+          align-items: center;
           padding: 0px;
           width: 100%;
           left: 0px;
           right: 0px;
-          filter: invert(100%);
           padding-left: 5px;
         "
       >
+        <div
+          style="
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+          "
+        >
+          <img
+            src="Images\Icon-Dark[Alone].png"
+            alt="Description"
+            style="width: 100%; height: 100%; border-radius: 50%"
+          />
+        </div>
         <a href="Chemistry/Physics.html" style="margin: 5px">Physics</a>
         <a href="Chemistry/Chemistry.html" style="margin: 5px">Chemistry</a>
         <a href="Biology/Biology.html" style="margin: 5px">Biology</a>
