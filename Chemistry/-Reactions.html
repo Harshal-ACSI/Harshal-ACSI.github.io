@@ -101,7 +101,7 @@
       padding-top: 3px;
       padding-bottom: 5px;
       border-radius: 10px;
-      background-color: rgba(0, 110, 110, 0.7);
+      background-color: rgba(0, 0, 0, 1);
       display: inline-block;
       margin-top: 5px;
       transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
@@ -111,7 +111,7 @@
     a:hover {
       text-decoration: none;
       color: rgb(255, 255, 255);
-      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 110, 110, 0.7);
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
 
@@ -232,6 +232,11 @@
       Now, let's discuss the different types of chemical reactions. There are 7
       main types of chemical reactions.
     </p>
+    <p>
+      <bold style="font-weight: bold">Combination reaction</bold><br />
+      General Equation: A + B → AB<br />
+      Two or more compounds combine to form one compound.
+    </p>
     <!--END-->
     <div id="cursor"></div>
     <script>
@@ -241,7 +246,6 @@
       let mouseY = 0;
       let isMouseInside = false;
 
-      // Retrieve the@ last known mouse position from local storage
       if (localStorage.getItem("mouseX") && localStorage.getItem("mouseY")) {
         mouseX = parseInt(localStorage.getItem("mouseX"));
         mouseY = parseInt(localStorage.getItem("mouseY"));
@@ -258,7 +262,6 @@
         cursor.style.opacity = "1";
         isMouseInside = true;
 
-        // Store the mouse position in local storage
         localStorage.setItem("mouseX", mouseX);
         localStorage.setItem("mouseY", mouseY);
       });
@@ -319,7 +322,7 @@
   </copywrite>
   <div
     style="
-      background-color: rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 3px;
@@ -327,12 +330,16 @@
       margin-left: 100px;
       margin-right: 100px;
       border-radius: 10px;
+      border: 20px;
+      border-color: invert;
     "
   >
     <glossary>
-      <mono>
+      <mono style="color: rgb(0, 0, 0)">
         Glossary:<br />
-        https://www.chemguide.co.uk/14to16/energy/exothermic.html
+        <a href="https://www.chemguide.co.uk/14to16/energy/exothermic.html"
+          >https://www.chemguide.co.uk/14to16/energy/exothermic.html</a
+        >
       </mono>
     </glossary>
   </div>

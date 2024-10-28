@@ -41,14 +41,22 @@
 
     h1 {
       font-family: Fractul_Alt, sans-serif;
-      font-size: 70px;
-      color: rgb(255, 255, 255);
+      font-size: 100px;
       text-align: center;
-      margin-top: 100px;
-      -webkit-text-fill-color: rgb(255, 255, 255);
-      -webkit-text-stroke: 2px rgb(0, 0, 0);
-      text-shadow: 4px 4px rgb(0, 0, 0);
-      padding-left: 0;
+      margin: 0px;
+      border: 0px;
+      -webkit-text-fill-color: rgb(0, 0, 0);
+      -webkit-text-stroke: 2px rgb(255, 255, 255);
+      text-shadow: 0px 0px rgb(255, 255, 255);
+      transition: text-shadow 0.3s ease-in-out;
+    }
+
+    h1:hover {
+      text-shadow: 5px 5px rgb(255, 255, 255);
+    }
+
+    h1:active {
+      text-shadow: 5px 5px rgba(0, 110, 110, 0.7);
     }
 
     h2 {
@@ -58,10 +66,10 @@
       text-align: center;
       font-weight: normal;
       margin-top: 20px;
-      width: 99%;
-      position: absolute;
+      position: relative;
+      left: 0px;
+      right: 0px;
     }
-
     p {
       font-family: Centaur, sans-serif;
       color: rgb(0, 0, 0);
@@ -75,6 +83,25 @@
     mono {
       font-family: Space_Mono, monospace;
       color: rgb(255, 255, 255);
+    }
+    box {
+      outline: black;
+      outline-width: 3px;
+      outline-style: solid;
+      display: block;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 100px;
+      margin-right: 100px;
+      -webkit-box-fill-color: rgb(255, 255, 255);
+      -webkit-box-stroke: 2px rgb(0, 0, 0);
+      box-shadow: 10px 10px rgb(0, 0, 0);
+      font-family: Space_Mono, monospace;
+      margin-bottom: 40px;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    box:hover {
+      box-shadow: 15px 15px rgb(0, 0, 0);
     }
 
     ::selection {
@@ -101,7 +128,7 @@
       padding-top: 3px;
       padding-bottom: 5px;
       border-radius: 10px;
-      background-color: rgba(0, 110, 110, 0.7);
+      background-color: rgba(0, 0, 0, 1);
       display: inline-block;
       margin-top: 5px;
       margin-left: 200px;
@@ -112,30 +139,69 @@
     a:hover {
       text-decoration: none;
       color: rgb(255, 255, 255);
-      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 110, 110, 0.7);
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
 
     #cursor {
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 23px;
+
       border-radius: 0% 50% 50% 50%;
       position: fixed;
       pointer-events: none;
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
-      mix-blend-mode: difference;
-      background-color: rgba(255, 145, 145, 0.5);
+      background-color: rgba(0, 110, 110, 0.5);
     }
   </style>
 
   <head>
     <meta charset="UTF-8" />
-    <title>Wiki Note</title>
+    <title>Studium</title>
   </head>
 
-  <body style="background-color: rgb(255, 255, 255); cursor: none">
-    <h1>Wiki Note</h1>
+  <body
+    style="
+      background-color: rgb(255, 255, 255);
+      cursor: none;
+      border: 0px;
+      margin: 0px;
+    "
+  >
+    <div
+      style="
+        left: 0px;
+        right: 0px;
+        background-color: rgb(0, 0, 0);
+        margin: 0px;
+        border: 0px;
+        padding-left: 0;
+        padding-top: 250px;
+        height: 70vh;
+      "
+    >
+      <h1 style="margin-bottom: 0px; padding-bottom: 0px; border-bottom: 0px">
+        Studium
+      </h1>
+      <p
+        style="
+          left: 0px;
+          right: 0px;
+          color: rgb(255, 255, 255);
+          padding-left: 200px;
+          padding-top: 0px;
+          margin: 0px;
+          border-top: 0px;
+          font-size: 20px;
+          text-align: center;
+          position: absolute;
+          top: 345px;
+        "
+      >
+        The medium for studying
+      </p>
+    </div>
     <contents style="margin-left: 200px">
       <cont>
         <hr style="margin-left: 180px; margin-right: 180px" />
@@ -152,12 +218,114 @@
       </cont>
     </contents>
     <p style="text-align: center">
-      Hi! I'm Harshal. I'm a student at Anglo-Chinese School (Independent) and I
-      have created this website to share my notes with you. If you find any
-      errors or wish to contribute, pleaze email me at <br />
-      23sabarimanickam.h@acsians.acsi.edu.sg<br />
-      I hope you find them useful!
+      Welcome to Studium – Your Ultimate Free Notes Sharing Platform! Crafted
+      with the collaboration of fellow learners, our mission at Studium embodies
+      empowerment through education in every sense. Here's why you need us:
     </p>
+    <div>
+      <box>
+        <bold style="font-weight: bold; font-size: 20px">Accessibility</bold
+        ><br />
+        <body-text
+          >No more barriers to knowledge acquisition; on Studium we provide a
+          free space where academic materials can be freely accessed and shared
+          without the constraints of financial limitations or institutional
+          restrictions. Our open-source platform ensures complete transparency,
+          allowing everyone equal opportunity in learning for all ages across
+          various disciplines.</body-text
+        >
+      </box>
+    </div>
+    <div>
+      <box>
+        <bold style="font-weight: bold; font-size: 20px"
+          >Collaborative Learning</bold
+        ><br />
+        <body-text
+          >At Studium, we believe that true understanding comes through
+          collaboration; students sharing their notes not only helps others but
+          also reinforces the knowledge they have themselves. By contributing to
+          our platform, you are joining a network of learners who value
+          collective intelligence and shared growth in academia.</body-text
+        >
+      </box>
+    </div>
+    <div>
+      <box>
+        <bold style="font-weight: bold; font-size: 20px"
+          >Open Source & Free</bold
+        ><br />
+        <body-text>
+          Our commitment is not just towards education but also the principles
+          that govern it; as a platform developed solely by other learners,
+          Studium champions open-source software which remains free and
+          accessible to all who seek academic assistance or wish to contribute
+          knowledge themselves—the embodiment of learning liberation.</body-text
+        >
+      </box>
+    </div>
+    <div>
+      <box>
+        <bold style="font-weight: bold; font-size: 20px">Private</bold><br />
+        <body-text>
+          Your Privacy is Paramount: At Studium, your journey through the world
+          of academia remains yours alone; we respect and protect this sacred
+          space with utmost vigilance. Here on our platform lies a haven where
+          personal data stands undefiled—for privacy here at Studium isn't an
+          afterthought but rather built into its very foundation: rest assured
+          that your digital interactions are safe from prying eyes, secured
+          within the sanctuary of confidentiality we maintain as staunchly
+          protected guardians.
+        </body-text>
+      </box>
+    </div>
+    <p>
+      Join us at Studium today; together let's break free from the constraints
+      of traditional education, champion knowledge sharing amongst peers,
+      empower each other to learn more effectively – because learning should not
+      be an individual endeavor but rather one that connects and enriches every
+      learner in this global community.
+    </p>
+  </body>
+  <bar>
+    <rect
+      style="
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0px;
+        margin: 10px;
+        border-radius: 10px 10px 10px 10px;
+        position: fixed;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.6);
+        filter: invert(100%);
+      "
+    >
+      <buttons
+        style="
+          padding: 0px;
+          width: 100%;
+          left: 0px;
+          right: 0px;
+          filter: invert(100%);
+          padding-left: 5px;
+        "
+      >
+        <a href="Chemistry/Physics.html" style="margin: 5px">Physics</a>
+        <a href="Chemistry/Chemistry.html" style="margin: 5px">Chemistry</a>
+        <a href="Biology/Biology.html" style="margin: 5px">Biology</a>
+        <a href="Mathematics/Mathematics.html" style="margin: 5px">Math</a>
+        <a href="JoinUs/Contributors.html" style="margin: 5px">Contributors</a>
+        <a href="JoinUs.html" style="margin: 5px">Join Us!</a>
+      </buttons>
+    </rect>
+  </bar>
+  <cursor>
     <div id="cursor"></div>
     <script>
       const cursor = document.getElementById("cursor");
@@ -212,7 +380,7 @@
 
       updateCursor();
     </script>
-  </body>
+  </cursor>
   <copywrite
     style="
       bottom: 0px;
