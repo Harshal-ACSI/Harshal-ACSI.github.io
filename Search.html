@@ -20,7 +20,7 @@
       padding-left: 200px;
     }
 
-    chap {
+    .chap {
       font-family: Centaur, sans-serif;
       color: rgb(0, 0, 0);
       text-align: center;
@@ -32,7 +32,7 @@
       text-underline-offset: 4px;
     }
 
-    cont {
+    .cont {
       font-family: Centaur, sans-serif;
       color: rgb(0, 0, 0);
       text-align: left;
@@ -104,7 +104,9 @@
       background-color: rgba(0, 0, 0, 1);
       display: inline-block;
       margin-top: 5px;
-      margin-left: 200px;
+      margin-left: 30%;
+      margin-right: 30%;
+      width: 40%;
       transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
     }
@@ -127,42 +129,107 @@
       mix-blend-mode: difference;
       background-color: rgba(255, 145, 145, 0.5);
     }
+
+    .search-container {
+      margin: 20px;
+    }
+
+    .search-box {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border-width: 0;
+      background-color: rgba(0, 0, 0, 1);
+      color: rgb(255, 255, 255);
+      cursor: none;
+      width: 85%;
+      font-family: Space_Mono, monospace;
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .search-button {
+      padding: 10px;
+      font-size: 16px;
+      font-family: Space_Mono, monospace;
+      border-radius: 10px;
+      border-width: 0;
+      background-color: rgba(0, 110, 110, 0.7);
+      color: rgb(255, 255, 255);
+      cursor: none;
+      width: 5%;
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .search-button:active {
+      background-color: rgba(0, 110, 110, 1);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
   </style>
 
   <head>
     <meta charset="UTF-8" />
-    <title>Physics</title>
+    <title>Search</title>
     <meta name="viewport" />
-    <meta name="description" content="Learn about Physics through Studium" />
+    <meta name="description" content="Learn about Search through Studium" />
   </head>
 
   <body style="background-color: rgb(255, 255, 255); cursor: none">
-    <h1>Physics</h1>
+    <div
+      class="search-container"
+      style="
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 60px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        margin: 0px;
+        border-radius: 0px 0px 10px 10px;
+        -webkit-backdrop-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        background-color: rgba(0, 0, 0, 0);
+      "
+    >
+      <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="Search..."
+      />
+      <button onclick="searchFunction()" class="search-button">Go</button>
+    </div>
+    <br />
+    <br />
+    <br />
     <contents style="margin-left: 200px">
-      <cont>
+      <cont style="margin-left: 200px; margin-right: 200px">
         <hr style="margin-left: 180px; margin-right: 180px" />
-        <z style="padding-left: 200px; font-size: 30px">Table of Contents:</z
-        ><br />
-        <a href="Physics.html">⟳ Physics </a><br />
-        <a href="-Intro.html">Introduction</a><br />
-        <a href="javascript:history.back()"> ⇐ Back </a><br />
+        <span style="padding-left: 200px; font-size: 30px">Search</span>
+        <br />
+        <a href="Search.html">⟳ Search </a>
+        <a href="javascript:history.back()"> ⇐ Back </a>
+        <br />
+        <a href="index.html">Home</a>
+        <a href="Physics/Physics.html">Physics Homepage</a>
+        <a href="Physics/-Intro.html">Physics Introduction</a>
+        <a href="Chemistry/Chemistry.html">Chemistry Homepage</a>
+        <a href="Chemistry/-Reactions.html">Reactions [Chemistry]</a>
+        <a href="Biology/Biology.html">Biology Homepage</a>
+        <a href="Math/Math.html">Math Homepage</a>
+        <a href="Coding/Coding.html">Coding Homepage</a>
+        <a href="JoinUs/JoinUs.html">Join Us Homepage</a>
+        <a href="JoinUs/Contributors.html">Contributors</a>
+        <a href="Changelog.html">Changelog</a>
+        <a href="Xperiment/Xperiment.html">Xperiment</a>
+
         <hr style="margin-left: 180px; margin-right: 180px" />
       </cont>
     </contents>
-    <br />
-    <p style="text-align: justify">
-      Physics is the fundamental language of the universe, governing the
-      behavior of matter and energy in all its forms. From the smallest
-      subatomic particles to the vast expanses of the cosmos, physics is the
-      driving force behind our understanding of the world around us.
-      <br />
-      <br />
-      In this section, we'll delve into the fascinating realm of physics,
-      exploring the latest discoveries, theories, and applications that are
-      shaping our knowledge of the universe. Whether you're a seasoned scientist
-      or simply curious about the mysteries of the physical world, we invite you
-      to join us on this journey of discovery.
-    </p>
+
     <div
       style="
         bottom: 0px;
@@ -248,35 +315,37 @@
       }
 
       updateCursor();
+
+      function searchFunction() {
+        var input, filter, contents, cont, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        contents = document.querySelector("contents");
+        cont = contents.getElementsByTagName("cont")[0];
+        a = cont.getElementsByTagName("a");
+
+        for (i = 0; i < a.length; i++) {
+          txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+            a[i].style.marginLeft = "30%";
+            a[i].style.marginRight = "30%";
+            a[i].style.width = "40%";
+            a[i].style.marginTop = "5px";
+          } else {
+            a[i].style.display = "none";
+            a[i].style.margin = "0";
+          }
+        }
+      }
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            searchFunction();
+          }
+        });
     </script>
   </body>
-  <copywrite
-    style="
-      bottom: 0px;
-      right: 0px;
-      border-top: 10px;
-      width: 200px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 0px;
-      border-radius: 10px 0px 0px 0px;
-      position: fixed;
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-      background-color: rgba(0, 110, 110, 0.7);
-    "
-  >
-    <mono
-      style="
-        font-size: 12px;
-        padding-left: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-      "
-    >
-      &nbsp;©</mono
-    >
-    <mono style="font-size: 12px; padding-left: 0px">
-      Copywrite Harshal 2024
-    </mono>
-  </copywrite>
 </html>
