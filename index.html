@@ -117,6 +117,7 @@
     .search-box {
       font-family: Space_Mono, monospace;
       font-size: 14px;
+      border: 0px;
       text-decoration: none;
       color: rgb(255, 255, 255);
       cursor: none;
@@ -126,7 +127,8 @@
       padding-bottom: 5px;
       border-radius: 10px;
       background-color: rgba(0, 0, 0, 1);
-      margin-top: 5px;
+      margin-top: 0px;
+      margin-left: 10px;
       transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
     }
@@ -136,6 +138,7 @@
       font-size: 14px;
       text-decoration: none;
       color: rgb(255, 255, 255);
+      border: 0px;
       cursor: none;
       padding-right: 10px;
       padding-left: 10px;
@@ -143,7 +146,8 @@
       padding-bottom: 5px;
       border-radius: 10px;
       background-color: rgba(0, 0, 0, 1);
-      margin-top: 5px;
+      margin-top: 0px;
+      margin-left: 10px;
       transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
     }
@@ -428,7 +432,10 @@
         <a href="JoinUs/JoinUs.html" style="margin: 5px">Join Us!</a>
         <a href="Search.html" style="margin: 5px">Search</a>
 
-        <div class="search-container">
+        <div
+          class="search-container"
+          style="margin-left: auto; padding-right: 20px"
+        >
           <input
             type="text"
             id="searchInput"
@@ -439,8 +446,6 @@
             Search
           </button>
         </div>
-
-        <mono style="margin-left: auto; padding-right: 20px">V4.5</mono>
       </buttons>
     </rect>
   </bar>
@@ -534,4 +539,13 @@
       Copywrite Harshal 2024
     </mono>
   </copywrite>
+  <mono
+    style="
+      position: absolute;
+      top: calc(100vh - 30px);
+      margin-left: 10px;
+      padding-right: 20px;
+    "
+    >V5.0</mono
+  >
 </html>
