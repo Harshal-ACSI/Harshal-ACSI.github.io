@@ -81,6 +81,7 @@
       font-family: Space_Mono, monospace;
       color: rgb(255, 255, 255);
     }
+
     box {
       outline: black;
       outline-width: 3px;
@@ -106,6 +107,50 @@
       margin-right: 90px;
       padding-left: 20px;
       padding-right: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      font-family: Space_Mono, monospace;
+      font-size: 14px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      cursor: none;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 5px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 1);
+      margin-top: 5px;
+      transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    }
+
+    .search-button {
+      font-family: Space_Mono, monospace;
+      font-size: 14px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      cursor: none;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 5px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 1);
+      margin-top: 5px;
+      transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    }
+
+    .search-button:active {
+      background-color: rgba(0, 110, 110, 1);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
 
     ::selection {
@@ -383,6 +428,18 @@
         <a href="JoinUs/JoinUs.html" style="margin: 5px">Join Us!</a>
         <a href="Search.html" style="margin: 5px">Search</a>
 
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-box"
+            placeholder="Search..."
+          />
+          <button class="search-button" onclick="redirectToSearch()">
+            Search
+          </button>
+        </div>
+
         <mono style="margin-left: auto; padding-right: 20px">V4.5</mono>
       </buttons>
     </rect>
@@ -441,6 +498,11 @@
       }
 
       updateCursor();
+
+      function redirectToSearch() {
+        var query = document.getElementById("searchInput").value;
+        window.location.href = "Search.html?query=" + encodeURIComponent(query);
+      }
     </script>
   </cursor>
   <copywrite

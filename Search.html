@@ -339,6 +339,11 @@
         }
       }
 
+      function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
       document
         .getElementById("searchInput")
         .addEventListener("keypress", function (event) {
@@ -346,6 +351,12 @@
             searchFunction();
           }
         });
+
+      const query = getQueryParameter("query");
+      if (query) {
+        document.getElementById("searchInput").value = query;
+        searchFunction();
+      }
     </script>
   </body>
 </html>
